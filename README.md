@@ -384,7 +384,7 @@ A empresa **Savinis**, especializada em software de alta performance, solicitou 
 
 - 📊 **Fluxograma:**  
 
-<img src="assets/images/Estoque.jpg" width="600">
+<img src="assets/images/Estoque.jpg" width="800">
 
 - 📄 **Código em Portugol:**  
   O algoritmo foi desenvolvido utilizando o site [portugol.dev](https://portugol.dev/).  
