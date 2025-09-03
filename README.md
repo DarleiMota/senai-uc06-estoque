@@ -1,5 +1,19 @@
 # UC06 · Lógica de Programação
 
+## 📑 Índice
+- [📚 Introdução à Lógica de Programação](#-introdução-à-lógica-de-programação)
+- [🧮 Conceitos de Variáveis](#-conceitos-de-variáveis)
+- [🔀 Estruturas Condicionais](#-estruturas-condicionais)
+- [🔁 Estruturas de Repetição (Looping)](#-estruturas-de-repetição-looping)
+- [📞 Chamada de Métodos](#-chamada-de-métodos)
+- [🧩 Introdução à Programação Orientada a Objetos (POO)](#-introdução-à-programação-orientada-a-objetos-poo)
+- [📊 Fluxograma](#-fluxograma)
+- [💡 Exercício Proposto - Estoque](#-exercicio-proposto---estoque)
+- [🛠️ Solução](#️-solução)
+- [🧙‍♂️ Desenvolvedor](#️-desenvolvedor)
+
+---
+
 ## 📚 Introdução à Lógica de Programação
 
 A lógica de programação é o fundamento essencial para o desenvolvimento de software, representando a capacidade de estruturar pensamentos e instruções de forma sequencial e coerente para resolver problemas computacionais.
@@ -148,9 +162,9 @@ fimpara
 
 ---
 
-# 📞 Chamada de Métodos
+## 📞 Chamada de Métodos
 
-## 🧠 Conceito de Métodos/Funções
+### 🧠 Conceito de Métodos/Funções
 
 Métodos (também chamados de funções, procedimentos ou sub-rotinas) são blocos de código que realizam uma tarefa específica e podem ser reutilizados em diferentes partes do programa. Eles promovem:
 
@@ -161,19 +175,9 @@ Métodos (também chamados de funções, procedimentos ou sub-rotinas) são bloc
 
 ---
 
-## 🔄 Métodos com Retorno
+### 🔄 Métodos com Retorno
 
 Métodos que processam dados e devolvem um resultado.
-
-### 📋 Estrutura Básica:
-```javascript
-function nomeDoMetodo(parametro1, parametro2) {
-    // Processamento
-    return resultado; // Retorna um valor
-}
-```
-
-### 💡 Exemplos Práticos:
 
 **JavaScript:**
 ```javascript
@@ -182,21 +186,9 @@ function calcularArea(largura, altura) {
     return largura * altura;
 }
 
-// Método que verifica se número é primo
-function ehPrimo(numero) {
-    if (numero <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(numero); i++) {
-        if (numero % i === 0) return false;
-    }
-    return true;
-}
-
-// Utilizando os métodos
+// Utilizando o método
 let area = calcularArea(5, 8);
 console.log("Área: " + area); // Área: 40
-
-let numeroTeste = 17;
-console.log(numeroTeste + " é primo? " + ehPrimo(numeroTeste)); // 17 é primo? true
 ```
 
 **Portugol:**
@@ -210,34 +202,15 @@ funcao real potencia(real base, inteiro expoente)
     retorne resultado
 fimfuncao
 
-// Função que converte Celsius para Fahrenheit
-funcao real celsiusParaFahrenheit(real celsius)
-    retorne (celsius * 9/5) + 32
-fimfuncao
-
-// Utilizando as funções
+// Utilizando a função
 real valorPotencia <- potencia(2, 3) // 8.0
-real temperaturaF <- celsiusParaFahrenheit(25) // 77.0
-
-escreva("2 elevado a 3 é: ", valorPotencia)
-escreva("25°C em Fahrenheit é: ", temperaturaF)
 ```
 
 ---
 
-## ⚡ Métodos sem Retorno (Void)
+### ⚡ Métodos sem Retorno (Void)
 
 Métodos que executam ações mas não retornam valores.
-
-### 📋 Estrutura Básica:
-```javascript
-function nomeDoMetodo(parametro1, parametro2) {
-    // Executa ações
-    // Não possui return com valor
-}
-```
-
-### 💡 Exemplos Práticos:
 
 **JavaScript:**
 ```javascript
@@ -250,21 +223,8 @@ function exibirMenu() {
     console.log("======================");
 }
 
-// Método que processa pedido
-function processarPedido(cliente, produtos) {
-    console.log("Processando pedido para: " + cliente);
-    console.log("Itens do pedido:");
-    
-    produtos.forEach(produto => {
-        console.log("- " + produto);
-    });
-    
-    console.log("Pedido enviado para preparo!");
-}
-
-// Utilizando os métodos
+// Utilizando o método
 exibirMenu();
-processarPedido("João Silva", ["Pizza", "Refrigerante", "Sobremesa"]);
 ```
 
 **Portugol:**
@@ -279,23 +239,13 @@ funcao desenharRetangulo(inteiro largura, inteiro altura, caracter caractere)
     fimpara
 fimfuncao
 
-// Procedimento que exibe dados do usuário
-funcao exibirDadosUsuario(cadeia nome, inteiro idade, cadeia email)
-    escreva("=== DADOS DO USUÁRIO ===")
-    escreva("Nome: ", nome)
-    escreva("Idade: ", idade)
-    escreva("E-mail: ", email)
-    escreva("=========================")
-fimfuncao
-
-// Utilizando os procedimentos
+// Utilizando o procedimento
 desenharRetangulo(5, 3, '*')
-exibirDadosUsuario("Maria Oliveira", 30, "maria@email.com")
 ```
 
 ---
 
-## 🎯 Tipos de Retorno Comuns
+### 🎯 Tipos de Retorno Comuns
 
 | Tipo de Retorno | JavaScript | Portugol | Exemplo de Uso |
 |-----------------|------------|----------|----------------|
@@ -303,37 +253,9 @@ exibirDadosUsuario("Maria Oliveira", 30, "maria@email.com")
 | Texto | `string` | `cadeia` | Formatação de texto |
 | Booleano | `boolean` | `logico` | Verificações condicionais |
 | Array/Lista | `array` | `vetor`, `matriz` | Processamento de coleções |
-| Nenhum | `void` | (omitido) | Ações sem retorno |
+| Nenhum | `void` | (omitido) | Ações sans retorno |
 
 ---
-
-## 🚀 Boas Práticas com Métodos
-
-1. **Nomes significativos**: Use verbos que descrevam a ação
-2. **Responsabilidade única**: Cada método deve fazer uma coisa específica
-3. **Parâmetros claros**: Use nomes descritivos para os parâmetros
-4. **Documentação**: Comente o propósito e uso do método
-5. **Tamanho adequado**: Métodos muito longos devem ser divididos
-
-**Exemplo de método bem estruturado:**
-```javascript
-/**
- * Calcula o preço final com desconto
- * @param {number} precoOriginal - Preço original do produto
- * @param {number} percentualDesconto - Percentual de desconto (0-100)
- * @returns {number} Preço final com desconto aplicado
- */
-function calcularPrecoComDesconto(precoOriginal, percentualDesconto) {
-    if (percentualDesconto < 0 || percentualDesconto > 100) {
-        throw new Error("Percentual de desconto inválido");
-    }
-    
-    const desconto = precoOriginal * (percentualDesconto / 100);
-    return precoOriginal - desconto;
-}
-```
-
-Esta abordagem torna o código mais legível, mantenável e menos propenso a erros, seguindo os princípios de modularização e reutilização que são fundamentais na programação.
 
 ## 🧩 Introdução à Programação Orientada a Objetos (POO)
 
@@ -395,32 +317,35 @@ Um fluxograma é uma representação visual de um algoritmo ou processo, utiliza
 
 | Símbolo | Nome | Descrição |
 |---------|------|-----------|
-| ![](assets/images/inicio-fim.jpg) | **Início/Fim** | Define onde o fluxo de trabalho começa e termina |
-| ![](assets/images/Conector.jpg)| **Fluxo** | Conector direcionado de um nó para outro |
-| ![](assets/images/processo.jpg) | **Processo** | Representa uma ação ou operação |
-| ![](assets/images/decisao.png) | **Decisão** | Cria ramificações baseadas em condições |
-| ![](assets/images/dados.jpg) | **Dados** | Entrada ou saída de dados |
-| ![](assets/images/Exibir.png) | **Exibir** | Mostra informação ao usuário |
+| <img src="assets/images/inicio-fim.jpg" width="80" alt="Início/Fim"> | **Início/Fim** | Define onde o fluxo de trabalho começa e termina |
+| <img src="assets/images/Conector.jpg" width="80" alt="Fluxo"> | **Fluxo** | Conector direcionado de um nó para outro |
+| <img src="assets/images/processo.jpg" width="80" alt="Processo"> | **Processo** | Representa uma ação ou operação |
+| <img src="assets/images/decisao.png" width="80" alt="Decisão"> | **Decisão** | Cria ramificações baseadas em condições |
+| <img src="assets/images/dados.jpg" width="80" alt="Dados"> | **Dados** | Entrada ou saída de dados |
+| <img src="assets/images/Exibir.png" width="80" alt="Exibir"> | **Exibir** | Mostra informação ao usuário |
 
 ### Exemplo de Fluxograma:
 
-![](assets/images/adicionar exemplo.jpg)
+<img src="assets/images/exemploParImpar.jpg" width="400">
 
 Este fluxograma representa um algoritmo que:
 1. Inicia o processo
-2. Lê um número
-3. Verifica se é par
-4. Exibe "Número par" se verdadeiro ou "Número ímpar" se falso
-5. Finaliza o processo
+2. Exibe uma mensagem "Digite um numero"
+3. Lê o número digitado
+4. Calculo para saber se o numero e par
+5. Verifica se é par
+6. Exibe "Número par" se verdadeiro ou "Número ímpar" se falso
+7. Finaliza o processo
 
 Os fluxogramas são ferramentas visuais essenciais para planejar a lógica de programas antes da implementação do código.
+
+---
 
 ## 💡 Exercicio Proposto - Estoque
 
 A empresa **Savinis**, especializada em software de alta performance, solicitou o desenvolvimento de um sistema para controle de estoque de peças. O objetivo é substituir o controle manual por uma solução digital simples, eficiente e de fácil uso para os funcionários.
 
-
-## 📋 Requisitos
+### 📋 Requisitos
 
 - Controle de estoque para **apenas uma peça**.
 - Solicitar o **saldo inicial** da peça ao iniciar o sistema.
@@ -434,13 +359,13 @@ A empresa **Savinis**, especializada em software de alta performance, solicitou 
 - Exibir o saldo atualizado após cada operação.
 - Ao encerrar, mostrar a mensagem "Sistema encerrado".
 
-## ▶️ Como Executar
+### ▶️ Como Executar
 
 1. Abra o arquivo [index.html](index.html) em um navegador.
 2. Clique no botão **INICIAR ESTOQUE** para iniciar o sistema.
 3. Siga as instruções exibidas nas caixas de diálogo.
 
-## 🔎 Passos Lógicos
+### 🔎 Passos Lógicos
 
 1. Aperte o botão **INICIAR ESTOQUE**
 2. Solicitar o saldo inicial da peça.
@@ -453,11 +378,13 @@ A empresa **Savinis**, especializada em software de alta performance, solicitou 
 5. Repetir até o usuário escolher encerrar.
 6. Exibir mensagem de encerramento.
 
+---
 
 ## 🛠️ Solução
 
 - 📊 **Fluxograma:**  
-  ![Fluxograma](assets/images/Estoque.jpg)
+
+<img src="assets/images/Estoque.jpg" width="600">
 
 - 📄 **Código em Portugol:**  
   O algoritmo foi desenvolvido utilizando o site [portugol.dev](https://portugol.dev/).  
@@ -469,6 +396,7 @@ A empresa **Savinis**, especializada em software de alta performance, solicitou 
 - 🌐 **Interface HTML:**  
   O sistema pode ser iniciado pelo arquivo [index.html](index.html).
 
+---
 
 ## 🧙‍♂️ Desenvolvedor
 
